@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "../css/global.css";
+import Header from "../components/Header.astro";
+---
+
+<Layout>
+  <main>
+    <Header />
+    <section class="main-gruppe">
+      <h2>Populære Kunstnere</h2>
+
+      <section class="popular_artist">
+        <Card
+          image="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill"
+          navn="Miley Cyrus"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill"
+          navn="Bentley"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill"
+          navn="Rihanna"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill"
+          navn="Jay-Z"
+          rolle="Kunstner"
+        />
+        <Card
+          image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill"
+          navn="The Black Eyes Peas"
+          rolle="Kunstner"
+        />
+      </section>
+
+      <section class="playlist-cards">
+        <PlaylistCard
+          image="https://picsum.photos/id/334/150/150"
+          navn="Calm Music"
+          rolle="Afslappende musik til de rolige dage."
+        />
+      </section>
+    </section>
+
+    <style>
+      main {
+        max-width: 1275px;
+      }
+
+      .main-gruppe {
+        background: linear-gradient(to bottom, #2f2f2f, #171717);
+        padding: 20px;
+      }
+
+      .popular_artist {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        color: white;
+      }
+
+      h2 {
+        color: white;
+      }
+    </style>
+  </main>
+</Layout>
