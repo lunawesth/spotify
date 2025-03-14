@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import "../css/global.css";
 import Header from "../components/Header.astro";
+import PlaylistCard from "../components/PlaylistCard.astro";
 ---
 
 <Layout>
@@ -39,11 +40,33 @@ import Header from "../components/Header.astro";
         />
       </section>
 
+      <h2>Populære Playlister</h2>
+
       <section class="playlist-cards">
         <PlaylistCard
-          image="https://picsum.photos/id/334/150/150"
+          image="https://picsum.photos/id/335/150/150"
           navn="Calm Music"
           rolle="Afslappende musik til de rolige dage."
+        />
+        <PlaylistCard
+          image="https://picsum.photos/id/334/150/150"
+          navn="Party Music"
+          rolle="Festlig musik til de vilde fester."
+        />
+        <PlaylistCard
+          image="https://picsum.photos/id/364/150/150"
+          navn="Workout Music"
+          rolle="Motiverende musik til træning."
+        />
+        <PlaylistCard
+          image="https://picsum.photos/id/65/150/150"
+          navn="Study Music"
+          rolle="Rolig musik til studietiden."
+        />
+        <PlaylistCard
+          image="https://picsum.photos/id/76/150/150"
+          navn="Sleep Music"
+          rolle="Beroligende musik til en god nattesøvn."
         />
       </section>
     </section>
@@ -54,18 +77,29 @@ import Header from "../components/Header.astro";
       }
 
       .main-gruppe {
-        background: linear-gradient(to bottom, #2f2f2f, #171717);
+        background: linear-gradient(to bottom, #1f1f1f, #0a0a0a);
         padding: 20px;
       }
 
       .popular_artist {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        color: white;
+        gap: 20px;
+      }
+
+      .playlist-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
       }
 
       h2 {
         color: white;
+      }
+
+      h2:hover {
+        text-decoration: underline;
       }
     </style>
   </main>
