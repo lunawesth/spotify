@@ -1,4 +1,9 @@
 <header>
+  <div>
+    <button class="arrow">&#x276E;</button>
+    <button class="arrow">&#x276F;</button>
+  </div>
+
   <div class="btn-group">
     <div class="btn-1">Sign Up</div>
     <div class="btn-2">Log In</div>
@@ -9,9 +14,19 @@
   header {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    position: absolute;
+    justify-content: space-between;
+    position: relative;
     padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .arrow {
+    font-size: 20px;
+    color: rgb(172, 172, 172);
+    background-color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
   }
 
   .btn-group {
